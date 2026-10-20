@@ -1,0 +1,128 @@
+
+Report Summary
+
+┌──────────────────────────────────┬────────┬─────────────────┬─────────┐
+│              Target              │  Type  │ Vulnerabilities │ Secrets │
+├──────────────────────────────────┼────────┼─────────────────┼─────────┤
+│ golden-path:0.1.0 (debian 12.13) │ debian │       16        │    -    │
+├──────────────────────────────────┼────────┼─────────────────┼─────────┤
+│ app/app.jar                      │  jar   │        8        │    -    │
+└──────────────────────────────────┴────────┴─────────────────┴─────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+golden-path:0.1.0 (debian 12.13)
+================================
+Total: 16 (HIGH: 15, CRITICAL: 1)
+
+┌────────────┬────────────────┬──────────┬──────────────┬───────────────────┬─────────────────┬─────────────────────────────────────────────────────────────┐
+│  Library   │ Vulnerability  │ Severity │    Status    │ Installed Version │  Fixed Version  │                            Title                            │
+├────────────┼────────────────┼──────────┼──────────────┼───────────────────┼─────────────────┼─────────────────────────────────────────────────────────────┤
+│ libexpat1  │ CVE-2024-28757 │ HIGH     │ fixed        │ 2.5.0-1+deb12u2   │ 2.5.0-1+deb12u4 │ expat: XML Entity Expansion                                 │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2024-28757                  │
+│            ├────────────────┤          │              │                   │                 ├─────────────────────────────────────────────────────────────┤
+│            │ CVE-2025-59375 │          │              │                   │                 │ firefox: thunderbird: expat: libexpat in Expat allows       │
+│            │                │          │              │                   │                 │ attackers to trigger large dynamic...                       │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-59375                  │
+│            ├────────────────┤          │              │                   │                 ├─────────────────────────────────────────────────────────────┤
+│            │ CVE-2026-25210 │          │              │                   │                 │ libexpat: libexpat: Information disclosure and data         │
+│            │                │          │              │                   │                 │ integrity issues due to integer overflow...                 │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-25210                  │
+│            ├────────────────┤          │              │                   │                 ├─────────────────────────────────────────────────────────────┤
+│            │ CVE-2026-45186 │          │              │                   │                 │ libexpat: denial of service via crafted XML input           │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-45186                  │
+│            ├────────────────┤          │              │                   │                 ├─────────────────────────────────────────────────────────────┤
+│            │ CVE-2026-66046 │          │              │                   │                 │ expat: Expat: Denial of Service via quadratic complexity in │
+│            │                │          │              │                   │                 │ attribute processing                                        │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-66046                  │
+│            ├────────────────┤          │              │                   ├─────────────────┼─────────────────────────────────────────────────────────────┤
+│            │ CVE-2026-76957 │          │              │                   │ 2.5.0-1+deb12u3 │ libexpat: libexpat: Memory corruption vulnerability allows  │
+│            │                │          │              │                   │                 │ arbitrary code execution or denial of...                    │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-76957                  │
+│            ├────────────────┤          ├──────────────┤                   ├─────────────────┼─────────────────────────────────────────────────────────────┤
+│            │ CVE-2026-77214 │          │ affected     │                   │                 │ expat: expat: Information disclosure via heap buffer        │
+│            │                │          │              │                   │                 │ over-read in XML_ParseBuffer                                │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-77214                  │
+│            ├────────────────┤          ├──────────────┤                   ├─────────────────┼─────────────────────────────────────────────────────────────┤
+│            │ CVE-2026-93990 │          │ fixed        │                   │ 2.5.0-1+deb12u4 │ expat: Expat: XML Injection via Malformed UTF-16 Input      │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-93990                  │
+├────────────┼────────────────┤          │              ├───────────────────┼─────────────────┼─────────────────────────────────────────────────────────────┤
+│ liblcms2-2 │ CVE-2026-41254 │          │              │ 2.14-2            │ 2.14-2+deb12u1  │ Little CMS: lcms2: mm2/Little-CMS: Little CMS: Information  │
+│            │                │          │              │                   │                 │ disclosure or denial of service...                          │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-41254                  │
+├────────────┼────────────────┤          ├──────────────┼───────────────────┼─────────────────┼─────────────────────────────────────────────────────────────┤
+│ libuuid1   │ CVE-2026-53613 │          │ affected     │ 2.38.1-5+deb12u3  │                 │ util-linux: util-linux: TOCTOU in the mount program via     │
+│            │                │          │              │                   │                 │ ancestor directory swap on...                               │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-53613                  │
+│            ├────────────────┤          │              │                   ├─────────────────┼─────────────────────────────────────────────────────────────┤
+│            │ CVE-2026-53615 │          │              │                   │                 │ util-linux: util-linux: Partition metadata compromise via   │
+│            │                │          │              │                   │                 │ integer overflow in DOS partition parser...                 │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-53615                  │
+│            ├────────────────┤          │              │                   ├─────────────────┼─────────────────────────────────────────────────────────────┤
+│            │ CVE-2026-76642 │          │              │                   │                 │ util-linux: util-linux: failed external mount helper still  │
+│            │                │          │              │                   │                 │ runs privileged X-mount post-hooks                          │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-76642                  │
+│            ├────────────────┤          │              │                   ├─────────────────┼─────────────────────────────────────────────────────────────┤
+│            │ CVE-2026-78408 │          │              │                   │                 │ util-linux: util-linux: nsenter --join-cgroup leaks root    │
+│            │                │          │              │                   │                 │ cgroup migration authority                                  │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-78408                  │
+│            ├────────────────┤          │              │                   ├─────────────────┼─────────────────────────────────────────────────────────────┤
+│            │ CVE-2026-78409 │          │              │                   │                 │ util-linux: util-linux: X-mount.subdir detached-tree        │
+│            │                │          │              │                   │                 │ resolution can escape via intermediate symlinks             │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-78409                  │
+│            ├────────────────┤          │              │                   ├─────────────────┼─────────────────────────────────────────────────────────────┤
+│            │ CVE-2026-78410 │          │              │                   │                 │ util-linux: util-linux: restricted bind mounts do not pin   │
+│            │                │          │              │                   │                 │ the source, allowing X-mount.owner/group/mode...            │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-78410                  │
+├────────────┼────────────────┼──────────┼──────────────┼───────────────────┼─────────────────┼─────────────────────────────────────────────────────────────┤
+│ zlib1g     │ CVE-2023-45853 │ CRITICAL │ will_not_fix │ 1:1.2.13.dfsg-1   │                 │ zlib: integer overflow and resultant heap-based buffer      │
+│            │                │          │              │                   │                 │ overflow in zipOpenNewFileInZip4_6                          │
+│            │                │          │              │                   │                 │ https://avd.aquasec.com/nvd/cve-2023-45853                  │
+└────────────┴────────────────┴──────────┴──────────────┴───────────────────┴─────────────────┴─────────────────────────────────────────────────────────────┘
+
+Java (jar)
+==========
+Total: 8 (HIGH: 5, CRITICAL: 3)
+
+┌─────────────────────────────────────────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────────────────┬──────────────────────────────────────────────────────────────┐
+│                       Library                       │ Vulnerability  │ Severity │ Status │ Installed Version │       Fixed Version       │                            Title                             │
+├─────────────────────────────────────────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ org.apache.tomcat.embed:tomcat-embed-core (app.jar) │ CVE-2026-65182 │ CRITICAL │ fixed  │ 11.0.24           │ 11.0.25, 10.1.58, 9.0.121 │ tomcat: Apache Tomcat: Security constraint bypass due to     │
+│                                                     │                │          │        │                   │                           │ improper access control                                      │
+│                                                     │                │          │        │                   │                           │ https://avd.aquasec.com/nvd/cve-2026-65182                   │
+│                                                     ├────────────────┤          │        │                   │                           ├──────────────────────────────────────────────────────────────┤
+│                                                     │ CVE-2026-65905 │          │        │                   │                           │ tomcat: Apache Tomcat: Authentication bypass via limited     │
+│                                                     │                │          │        │                   │                           │ replay attack in DIGEST authenticator...                     │
+│                                                     │                │          │        │                   │                           │ https://avd.aquasec.com/nvd/cve-2026-65905                   │
+│                                                     ├────────────────┤          │        │                   │                           ├──────────────────────────────────────────────────────────────┤
+│                                                     │ CVE-2026-68525 │          │        │                   │                           │ tomcat: Apache Tomcat: Unauthorized resource access via FORM │
+│                                                     │                │          │        │                   │                           │ authentication bypass                                        │
+│                                                     │                │          │        │                   │                           │ https://avd.aquasec.com/nvd/cve-2026-68525                   │
+├─────────────────────────────────────────────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ tools.jackson.core:jackson-core (app.jar)           │ CVE-2026-89407 │ HIGH     │        │ 3.1.5             │ 3.1.7, 3.2.2              │ com.fasterxml.jackson/jackson-core:                          │
+│                                                     │                │          │        │                   │                           │ tools.jackson.core/jackson-core: Jackson-core: Denial of     │
+│                                                     │                │          │        │                   │                           │ Service via regular expression backtracking                  │
+│                                                     │                │          │        │                   │                           │ https://avd.aquasec.com/nvd/cve-2026-89407                   │
+│                                                     ├────────────────┤          │        │                   ├───────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                     │ CVE-2026-89425 │          │        │                   │ 3.1.7, 3.2.3              │ com.fasterxml.jackson.core/jackson-core: Jackson-core:       │
+│                                                     │                │          │        │                   │                           │ Denial of Service via unbounded StringBuilder growth during  │
+│                                                     │                │          │        │                   │                           │ malformed token...                                           │
+│                                                     │                │          │        │                   │                           │ https://avd.aquasec.com/nvd/cve-2026-89425                   │
+├─────────────────────────────────────────────────────┼────────────────┤          │        │                   ├───────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ tools.jackson.core:jackson-databind (app.jar)       │ CVE-2026-68497 │          │        │                   │ 3.2.2, 3.1.6              │ com.fasterxml.jackson.core/jackson-databind:                 │
+│                                                     │                │          │        │                   │                           │ tools.jackson.core/jackson-databind: jackson-databind: CPU   │
+│                                                     │                │          │        │                   │                           │ Denial of Service via unbounded numeric parsing              │
+│                                                     │                │          │        │                   │                           │ https://avd.aquasec.com/nvd/cve-2026-68497                   │
+│                                                     ├────────────────┤          │        │                   ├───────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                     │ CVE-2026-91776 │          │        │                   │ 3.1.7, 3.2.3              │ jackson-databind: com.fasterxml.jackson/jackson-core:        │
+│                                                     │                │          │        │                   │                           │ jackson-databind: Denial of Service via unbounded cache      │
+│                                                     │                │          │        │                   │                           │ growth in TypeDeserializerBase...                            │
+│                                                     │                │          │        │                   │                           │ https://avd.aquasec.com/nvd/cve-2026-91776                   │
+│                                                     ├────────────────┤          │        │                   │                           ├──────────────────────────────────────────────────────────────┤
+│                                                     │ CVE-2026-91777 │          │        │                   │                           │ com.fasterxml.jackson.core/jackson-databind:                 │
+│                                                     │                │          │        │                   │                           │ tools.jackson.core:jackson-databind: Jackson-databind:       │
+│                                                     │                │          │        │                   │                           │ Denial of Service via quadratic forward-reference completion │
+│                                                     │                │          │        │                   │                           │ https://avd.aquasec.com/nvd/cve-2026-91777                   │
+└─────────────────────────────────────────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────────────────┴──────────────────────────────────────────────────────────────┘
