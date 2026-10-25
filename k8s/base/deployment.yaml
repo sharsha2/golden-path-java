@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: golden-path
+  labels:
+    app.kubernetes.io/name: golden-path
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: golden-path
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: golden-path
+    spec:
+      containers:
+        - name: app
+          image: golden-path:0.1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+          env:
+            - name: APP_GREETING              # Spring maps this to app.greeting
+              valueFrom:
+                configMapKeyRef:
+                  name: golden-path-config
+                  key: APP_GREETING
+            - name: DB_PASSWORD               # fake value; shows how secrets are injected
+              valueFrom:
+                secretKeyRef:
+                  name: golden-path-secret
+                  key: DB_PASSWORD
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              memory: 512Mi                   # memory limit yes, CPU limit no (see interview Q4)
+          startupProbe:                       # gives the JVM time to start
+            httpGet: { path: /actuator/health/liveness, port: http }
+            periodSeconds: 2
+            failureThreshold: 30              # up to 60 s to start
+          livenessProbe:
+            httpGet: { path: /actuator/health/liveness, port: http }
+            periodSeconds: 10
+          readinessProbe:
+            httpGet: { path: /actuator/health/readiness, port: http }
+            periodSeconds: 5

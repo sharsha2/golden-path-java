@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: golden-path-prod
+resources:
+  - namespace.yaml
+  - ../../base
+replicas:
+  - name: golden-path
+    count: 3
+configMapGenerator:
+  - name: golden-path-config
+    behavior: merge
+    literals:
+      - APP_GREETING=Hello from PROD
