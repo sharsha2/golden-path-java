@@ -15,7 +15,6 @@ Legend:
 
 golden-path:0.1.0 (debian 12.13)
 ================================
-Total: 16 (HIGH: 15, CRITICAL: 1)
 
 ┌────────────┬────────────────┬──────────┬──────────────┬───────────────────┬─────────────────┬─────────────────────────────────────────────────────────────┐
 │  Library   │ Vulnerability  │ Severity │    Status    │ Installed Version │  Fixed Version  │                            Title                            │
