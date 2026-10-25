@@ -45,8 +45,11 @@ jobs:
       - run: pip install "pyjwt[crypto]>=2.8,<3"
       - name: Get an OIDC token and verify it like a cloud provider would
         env:
-          # The ONE repo + branch we trust. Replace <you> with your GitHub username (exact case).
-          ALLOWED_SUBJECT: "repo:<you>/golden-path-java:ref:refs/heads/main"
+          # The ONE repo + branch we trust.
+          # This repo's OIDC subjects carry immutable numeric IDs (owner@ownerID/repo@repoID),
+          # so the plain "repo:owner/name:ref:..." form would NOT match. The IDs survive a
+          # rename and cannot be reclaimed by someone re-registering a deleted name.
+          ALLOWED_SUBJECT: "repo:sharsha2@36820319/golden-path-java@1426315790:ref:refs/heads/main"
         run: |
           OIDC_TOKEN=$(curl -sSf \
             -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
