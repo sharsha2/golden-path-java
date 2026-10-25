@@ -1,0 +1,84 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+# Default for every job: read-only. Jobs ask for more only if they need it.
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - run: ./mvnw -B verify
+
+  oidc-lab:
+    # Runs on pushes to ANY branch, so you can prove other branches are rejected.
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write                 # allows this job to request an OIDC token
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - run: pip install "pyjwt[crypto]>=2.8,<3"
+      - name: Get an OIDC token and verify it like a cloud provider would
+        env:
+          # The ONE repo + branch we trust. Replace <you> with your GitHub username (exact case).
+          ALLOWED_SUBJECT: "repo:<you>/golden-path-java:ref:refs/heads/main"
+        run: |
+          OIDC_TOKEN=$(curl -sSf \
+            -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=golden-path-lab" | jq -r .value)
+          echo "::add-mask::$OIDC_TOKEN"     # never show the raw token in logs
+          export OIDC_TOKEN
+          python3 scripts/verify_oidc.py
+
+  push-image:
+    # Only main, only after tests AND the OIDC check pass. Pull requests never push.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: [test, oidc-lab]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      packages: write                 # only this job can write to GHCR
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Build and push to GHCR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}    # auto-created per job, expires when the job ends
+          ACTOR: ${{ github.actor }}
+        run: |
+          OWNER=$(echo "$GITHUB_REPOSITORY_OWNER" | tr '[:upper:]' '[:lower:]')
+          IMAGE="ghcr.io/$OWNER/golden-path:${GITHUB_SHA::12}"
+          echo "$GH_TOKEN" | docker login ghcr.io -u "$ACTOR" --password-stdin
+          docker build \
+            --label "org.opencontainers.image.source=https://github.com/$GITHUB_REPOSITORY" \
+            -t "$IMAGE" .
+          docker push "$IMAGE"
+          DIGEST=$(docker inspect --format '{{index .RepoDigests 0}}' "$IMAGE")
+          echo "Pushed: $DIGEST" | tee -a "$GITHUB_STEP_SUMMARY"
