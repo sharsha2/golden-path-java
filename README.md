@@ -1,4 +1,59 @@
-# Golden Path Java
+# Golden Path Starter (Java) – P1
+
+A small Spring Boot service with a **secure-by-default container and CI pipeline**:
+the kind of baseline a platform team gives every new service.
+
+![ci](https://github.com/sharsha2/golden-path-java/actions/workflows/ci.yml/badge.svg)
+
+## What it proves
+
+| Control | How | Evidence |
+|---|---|---|
+| Minimal, non-root image | Multi-stage build, distroless Java 21 (debian13), both stages pinned by digest, UID 65532 | `docs/scan-before.txt` vs `docs/scan-after.txt` |
+| No stored cloud secrets | GitHub OIDC tokens verified by a custom verifier (main branch only); GHCR push with the job-scoped `GITHUB_TOKEN` | [`scripts/verify_oidc.py`](scripts/verify_oidc.py), job `oidc-lab` |
+| Least-privilege CI | Read-only default token, `id-token: write` / `packages: write` only where needed, every action SHA-pinned | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) |
+| Vulnerable dependencies blocked | Trivy `fs` + image gates, fail on fixable HIGH/CRITICAL | PR #&lt;n&gt;: Log4Shell blocked |
+| Secrets blocked | Gitleaks on full history (`fetch-depth: 0`) | PR #&lt;n&gt; |
+| Workflows audited as code | zizmor on every PR — catches template injection, dangerous triggers, cache poisoning | job `workflow-scan` |
+| Supply chain hygiene | Dependabot with a 7-day cooldown, SHA pins, OpenSSF Scorecard &lt;before&gt; → &lt;after&gt; | `.github/dependabot.yml`, `docs/scorecard-*.txt` |
+
+## Run it
+
+```bash
+docker build -t golden-path:local . && docker run --rm -p 8080:8080 golden-path:local
+curl localhost:8080/api/hello
+kubectl apply -k k8s/overlays/dev
+```
+
+## Pipeline shape
+
+```
+PR:    test ─┐
+             ├─ dependency-scan ─┬─ image (build + scan)      → never pushes
+             ├─ secret-scan ─────┤
+             └─ workflow-scan ───┘
+main:  the same, plus oidc-lab, and image pushes to GHCR
+```
+
+Three deliberate choices:
+
+- **Scan what you ship.** The image gate runs against the built artifact, not a guess about it.
+- **Scan jobs hold no credentials.** Only the final push step on `main` gets `packages: write`. This is the lesson from the March 2026 Trivy and May 2026 TanStack attacks: jobs running third-party code should have nothing worth stealing.
+- **`ignore-unfixed: true`** so the gate only fails on things you can actually act on. Unfixable findings are tracked in [`.trivyignore`](.trivyignore) with an owner and a review date, never silenced wholesale.
+
+## What I deliberately did NOT do (yet)
+
+- **Image signing and SBOMs:** next project (P2).
+- **Pod security hardening and admission policies:** P4.
+- **SAST (CodeQL/Semgrep):** Month 5.
+
+---
+
+# How it was built, stage by stage
+
+What follows is the full lab write-up — every stage, every decision, and a
+reference for every terminal command used. The section above is the summary; this
+is the detail.
 
 A tiny Spring Boot service used as a hands-on lab for **container and Kubernetes
 security**. The app itself is deliberately boring — one endpoint that returns a
@@ -171,8 +226,8 @@ build toolchain shipped to production — exactly the thing multi-stage fixes.
 
 ### Be honest about the scan numbers
 
-**OS CVEs went up, from 0 to 16.** That is not a mistake and it's worth
-understanding:
+**OS CVEs went up, from 0 to 16 — and this was later fixed by changing base image.**
+Worth understanding, because the first attempt looked like a regression:
 
 - The naive image is based on Ubuntu 26.04, which currently has 0 known
   HIGH/CRITICAL CVEs in its installed packages.
@@ -182,8 +237,15 @@ understanding:
 
 So **"distroless" does not mean "no CVEs."** It means a far smaller attack
 surface, no shell, and no tools for an attacker to use. Those are different
-properties from a CVE count, and a scanner only measures the latter. If you want
-both, try `distroless/java21-debian13` or a slim JRE base.
+properties from a CVE count, and a scanner only measures the latter.
+
+**Resolution:** when Stage 6 added a Trivy image gate, those 10 *fixable* HIGH
+findings would have failed the build — and distroless has no package manager, so
+you cannot patch them yourself. Switching the base to
+`gcr.io/distroless/java21-debian13:nonroot` scans **completely clean (0
+findings)**, so the Dockerfile now pins debian13. The lesson: when a base image
+lags on security updates, the fix is to change base image, not to add
+exceptions.
 
 **Also unchanged: 8 CVEs in the application's own dependencies** — 3 CRITICAL in
 `tomcat-embed-core` 11.0.24 (authentication and security-constraint bypasses)

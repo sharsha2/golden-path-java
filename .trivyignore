@@ -1,0 +1,8 @@
+# Format: one CVE per line. Every entry MUST have a comment with:
+#   why it's accepted, who decided, and when it will be reviewed.
+#
+# The gate uses ignore-unfixed:true, so it only fails on findings that HAVE a fix.
+# Unfixable findings are tracked here (or just tracked), not silenced globally.
+#
+# Example (delete when you have a real one):
+# CVE-2099-00000  # Not reachable: library's XML parser feature is unused. Owner: harsha. Review: 2026-12-31

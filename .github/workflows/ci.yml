@@ -1,7 +1,9 @@
 name: ci
 
+# PRs are scanned but never push. Only main publishes.
 on:
   push:
+    branches: [main]
   pull_request:
 
 # Default for every job: read-only. Jobs ask for more only if they need it.
@@ -18,17 +20,60 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
+        with: { persist-credentials: false }
       - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
-        with:
-          distribution: temurin
-          java-version: '21'
-          cache: maven
+        with: { distribution: temurin, java-version: '21', cache: maven }
       - run: ./mvnw -B verify
 
+  dependency-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with: { persist-credentials: false }
+      - name: Trivy - scan pom.xml dependencies
+        # v0.36.0 published 2026-04-22, five weeks AFTER the 2026-03-19 trivy-action
+        # tag-hijack incident (CVE-2026-33634). Pinned by SHA so a tag force-push
+        # cannot change what runs here.
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+        with:
+          scan-type: fs
+          scan-ref: .
+          scanners: vuln
+          severity: HIGH,CRITICAL
+          ignore-unfixed: true
+          exit-code: '1'                 # fail the job if anything is found
+          trivyignores: .trivyignore
+          version: v0.76.1               # pin the Trivy binary too; update after checking releases
+
+  secret-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0                 # full history: secrets in OLD commits count too
+          persist-credentials: false
+      - uses: gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e # v3.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  workflow-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with: { persist-credentials: false }
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with: { python-version: '3.12' }
+      - name: zizmor - audit workflow files
+        run: |
+          pip install "zizmor==1.31.1"
+          zizmor .                       # audits this repo's workflows; fails on findings
+
   oidc-lab:
-    # Runs on pushes to ANY branch, so you can prove other branches are rejected.
+    # Kept from Week 3. Deliberately NOT in image's needs: it is skipped on pull
+    # requests, and a skipped dependency would skip the image scan too.
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -37,11 +82,9 @@ jobs:
       id-token: write                 # allows this job to request an OIDC token
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
+        with: { persist-credentials: false }
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
-        with:
-          python-version: '3.12'
+        with: { python-version: '3.12' }
       - run: pip install "pyjwt[crypto]>=2.8,<3"
       - name: Get an OIDC token and verify it like a cloud provider would
         env:
@@ -58,20 +101,30 @@ jobs:
           export OIDC_TOKEN
           python3 scripts/verify_oidc.py
 
-  push-image:
-    # Only main, only after tests AND the OIDC check pass. Pull requests never push.
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: [test, oidc-lab]
+  image:
+    needs: [test, dependency-scan, secret-scan, workflow-scan]
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     permissions:
       contents: read
       packages: write                 # only this job can write to GHCR
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with: { persist-credentials: false }
+      - name: Build image
+        run: docker build -t golden-path:ci .
+      - name: Trivy - image gate
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
         with:
-          persist-credentials: false
-      - name: Build and push to GHCR
+          image-ref: golden-path:ci
+          severity: HIGH,CRITICAL
+          ignore-unfixed: true
+          exit-code: '1'
+          trivyignores: .trivyignore
+          version: v0.76.1
+      # Everything below runs ONLY on main: PRs are scanned but never pushed
+      - if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        name: Push to GHCR
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}    # auto-created per job, expires when the job ends
           ACTOR: ${{ github.actor }}
@@ -79,9 +132,6 @@ jobs:
           OWNER=$(echo "$GITHUB_REPOSITORY_OWNER" | tr '[:upper:]' '[:lower:]')
           IMAGE="ghcr.io/$OWNER/golden-path:${GITHUB_SHA::12}"
           echo "$GH_TOKEN" | docker login ghcr.io -u "$ACTOR" --password-stdin
-          docker build \
-            --label "org.opencontainers.image.source=https://github.com/$GITHUB_REPOSITORY" \
-            -t "$IMAGE" .
+          docker tag golden-path:ci "$IMAGE"
           docker push "$IMAGE"
-          DIGEST=$(docker inspect --format '{{index .RepoDigests 0}}' "$IMAGE")
-          echo "Pushed: $DIGEST" | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "Pushed: $(docker inspect --format '{{index .RepoDigests 0}}' "$IMAGE")" >> "$GITHUB_STEP_SUMMARY"
