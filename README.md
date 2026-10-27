@@ -12,10 +12,10 @@ the kind of baseline a platform team gives every new service.
 | Minimal, non-root image | Multi-stage build, distroless Java 21 (debian13), both stages pinned by digest, UID 65532 | `docs/scan-before.txt` vs `docs/scan-after.txt` |
 | No stored cloud secrets | GitHub OIDC tokens verified by a custom verifier (main branch only); GHCR push with the job-scoped `GITHUB_TOKEN` | [`scripts/verify_oidc.py`](scripts/verify_oidc.py), job `oidc-lab` |
 | Least-privilege CI | Read-only default token, `id-token: write` / `packages: write` only where needed, every action SHA-pinned | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) |
-| Vulnerable dependencies blocked | Trivy `fs` + image gates, fail on fixable HIGH/CRITICAL | PR #&lt;n&gt;: Log4Shell blocked |
-| Secrets blocked | Gitleaks on full history (`fetch-depth: 0`) | PR #&lt;n&gt; |
+| Vulnerable dependencies blocked | Trivy `fs` + image gates, fail on fixable HIGH/CRITICAL | Demo PR adding Log4Shell (`log4j-core` 2.14.1) to show the gate failing: in progress |
+| Secrets blocked | Gitleaks on full history (`fetch-depth: 0`) | Demo PR with a fake key to show the gate failing: in progress |
 | Workflows audited as code | zizmor on every PR — catches template injection, dangerous triggers, cache poisoning | job `workflow-scan` |
-| Supply chain hygiene | Dependabot with a 7-day cooldown, SHA pins, OpenSSF Scorecard &lt;before&gt; → &lt;after&gt; | `.github/dependabot.yml`, `docs/scorecard-*.txt` |
+| Supply chain hygiene | Dependabot with a 7-day cooldown, SHA pins, OpenSSF Scorecard baseline 5.3/10 (re-run after fixes in progress) | `.github/dependabot.yml`, `docs/scorecard-*.txt` |
 
 ## Run it
 
