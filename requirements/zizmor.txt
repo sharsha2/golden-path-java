@@ -1,0 +1,5 @@
+# Hash-pinned so CI installs exactly these bytes, nothing else.
+# Scoped to the platform GitHub's ubuntu runners use (linux x86_64 / py3-none-any).
+# Regenerate when bumping a version; see docs/ for the generator command.
+zizmor==1.31.1 \
+    --hash=sha256:58e878eb2dbd2c6183c105e1ac28c14f7dd1eca44a783f1fe2a69647d012c410

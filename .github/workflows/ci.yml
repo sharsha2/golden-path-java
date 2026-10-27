@@ -31,6 +31,12 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with: { persist-credentials: false }
+      # Trivy resolves parent POMs/BOMs to build the real dependency tree, and
+      # checks ~/.m2 before the network. Warming the local repo first keeps it
+      # off Maven Central, which rate-limits shared CI runners (HTTP 429).
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with: { distribution: temurin, java-version: '21', cache: maven }
+      - run: ./mvnw -B -q dependency:go-offline
       - name: Trivy - scan pom.xml dependencies
         # v0.36.0 published 2026-04-22, five weeks AFTER the 2026-03-19 trivy-action
         # tag-hijack incident (CVE-2026-33634). Pinned by SHA so a tag force-push
@@ -68,7 +74,7 @@ jobs:
         with: { python-version: '3.12' }
       - name: zizmor - audit workflow files
         run: |
-          pip install "zizmor==1.31.1"
+          pip install --require-hashes -r requirements/zizmor.txt
           zizmor .                       # audits this repo's workflows; fails on findings
 
   oidc-lab:
@@ -85,7 +91,9 @@ jobs:
         with: { persist-credentials: false }
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with: { python-version: '3.12' }
-      - run: pip install "pyjwt[crypto]>=2.8,<3"
+      # --require-hashes: pip installs exactly these bytes or fails. A compromised
+      # PyPI account or a swapped artifact cannot change what runs here.
+      - run: pip install --require-hashes -r requirements/oidc.txt
       - name: Get an OIDC token and verify it like a cloud provider would
         env:
           # The ONE repo + branch we trust.
