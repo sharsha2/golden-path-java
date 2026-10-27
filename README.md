@@ -12,10 +12,10 @@ the kind of baseline a platform team gives every new service.
 | Minimal, non-root image | Multi-stage build, distroless Java 21 (debian13), both stages pinned by digest, UID 65532 | `docs/scan-before.txt` vs `docs/scan-after.txt` |
 | No stored cloud secrets | GitHub OIDC tokens verified by a custom verifier (main branch only); GHCR push with the job-scoped `GITHUB_TOKEN` | [`scripts/verify_oidc.py`](scripts/verify_oidc.py), job `oidc-lab` |
 | Least-privilege CI | Read-only default token, `id-token: write` / `packages: write` only where needed, every action SHA-pinned | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) |
-| Vulnerable dependencies blocked | Trivy `fs` + image gates, fail on fixable HIGH/CRITICAL | Demo PR adding Log4Shell (`log4j-core` 2.14.1) to show the gate failing: in progress |
-| Secrets blocked | Gitleaks on full history (`fetch-depth: 0`) | Demo PR with a fake key to show the gate failing: in progress |
+| Vulnerable dependencies blocked | Trivy `fs` + image gates, fail on fixable HIGH/CRITICAL | [PR #3](https://github.com/sharsha2/golden-path-java/pull/3): Log4Shell blocked — `dependency-scan` fails on CVE-2021-44228, `image` skipped |
+| Secrets blocked | Gitleaks on full history (`fetch-depth: 0`) | [PR #4](https://github.com/sharsha2/golden-path-java/pull/4): fake AWS key blocked (`aws-access-token` + `generic-api-key`) |
 | Workflows audited as code | zizmor on every PR — catches template injection, dangerous triggers, cache poisoning | job `workflow-scan` |
-| Supply chain hygiene | Dependabot with a 7-day cooldown, SHA pins, OpenSSF Scorecard baseline 5.3/10 (re-run after fixes in progress) | `.github/dependabot.yml`, `docs/scorecard-*.txt` |
+| Supply chain hygiene | Dependabot with a 7-day cooldown, SHA-pinned actions, hash-pinned pip installs, OpenSSF Scorecard **5.3 → 6.2** | `.github/dependabot.yml`, `docs/scorecard-before.txt` vs `docs/scorecard-after.txt` |
 
 ## Run it
 
@@ -40,6 +40,50 @@ Three deliberate choices:
 - **Scan what you ship.** The image gate runs against the built artifact, not a guess about it.
 - **Scan jobs hold no credentials.** Only the final push step on `main` gets `packages: write`. This is the lesson from the March 2026 Trivy and May 2026 TanStack attacks: jobs running third-party code should have nothing worth stealing.
 - **`ignore-unfixed: true`** so the gate only fails on things you can actually act on. Unfixable findings are tracked in [`.trivyignore`](.trivyignore) with an owner and a review date, never silenced wholesale.
+
+## A control I tested and found wanting
+
+The secret gate did not work on the first attempt, and that is worth recording.
+
+The standard demo uses `AKIAIOSFODNN7EXAMPLE` — AWS's own published example key.
+Committing it proved nothing:
+
+- **GitHub push protection let the push through.**
+- **Gitleaks passed the PR.**
+
+Both allowlist AWS's documented example values, which is sensible of them and
+useless as a test. Re-running with a randomly generated, never-issued key in the
+same format failed the gate immediately, on two rules at once:
+
+```
+RuleID: aws-access-token    File: leaked.properties
+RuleID: generic-api-key     File: leaked.properties
+```
+
+Two lessons. First, scanners have allowlists and blind spots, so **a control you
+have not tested is a control you do not have** — the first PR looked like a
+working pipeline and was not. Second, once a secret is pushed it is public:
+forks, clones and caches may already hold it, so the fix is always to revoke and
+rotate, never just to delete the commit.
+
+## Scorecard: 5.3 → 6.2
+
+| Check | Before | After | What changed |
+|---|---|---|---|
+| License | 0/10 | 10/10 | added `LICENSE` (MIT) |
+| Pinned-Dependencies | 6/10 | 10/10 | pinned `Dockerfile.naive` by digest; hash-pinned both `pip install`s with `--require-hashes` |
+| Security-Policy | 4/10 | 10/10 | `SECURITY.md` now links the advisory form and states scope |
+| CI-Tests | – | 10/10 | scored once real PRs existed |
+
+Still open and deliberately so: `Branch-Protection` (ruleset not yet applied —
+see [`scripts/create-ruleset.sh`](scripts/create-ruleset.sh)), `SAST` (Month 5),
+`Fuzzing`, `Code-Review` and `Contributors` (solo repo), and `Maintained`
+(repo is under 90 days old).
+
+The hash-pinned pip installs are the substantive one. `pip install zizmor==1.31.1`
+pins a *version*; PyPI can still serve different bytes for it. With
+`--require-hashes` pip installs those exact bytes or fails — the same control as
+the action SHA pins, applied to Python.
 
 ## What I deliberately did NOT do (yet)
 
