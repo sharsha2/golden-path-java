@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# SBOMs are build output: regenerated every run, uploaded as workflow artifacts
+sbom/
