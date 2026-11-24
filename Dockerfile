@@ -14,7 +14,7 @@ RUN mvn -B -q package -DskipTests
 # debian13, not debian12: the debian12 base carries 10 fixable HIGH CVEs
 # (libexpat1, liblcms2-2) that would fail the image gate, and distroless has no
 # package manager to patch them yourself. debian13 scans clean.
-FROM gcr.io/distroless/java21-debian13:nonroot@sha256:a2aeb5a7a714cfe928b31fdf67b2d23f503ea6b9612705af062de22e0c50ba77
+FROM gcr.io/distroless/java21-debian13:nonroot@sha256:128bd878463537eef7771b50fecf68faace9089f654a2d233f1c4f344e6817d9
 WORKDIR /app
 COPY --from=build /src/target/*.jar /app/app.jar
 # Numeric UID so Kubernetes can verify runAsNonRoot (it can't check a user NAME)
