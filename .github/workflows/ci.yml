@@ -130,6 +130,21 @@ jobs:
           exit-code: '1'
           trivyignores: .trivyignore
           version: v0.76.1
+      # SBOM of the exact image that was just scanned, so the inventory and the
+      # gate always describe the same artifact.
+      - name: Generate SBOM (CycloneDX)
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+        with:
+          image-ref: golden-path:ci
+          format: cyclonedx
+          output: sbom.cdx.json
+          version: v0.76.1
+      - name: Upload SBOM
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: sbom-${{ github.sha }}
+          path: sbom.cdx.json
+          retention-days: 30
       # Everything below runs ONLY on main: PRs are scanned but never pushed
       - if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         name: Push to GHCR

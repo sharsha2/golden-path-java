@@ -1,0 +1,4017 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:5a34e949-ea91-4b75-8964-cdd8c0a00aed",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-24T01:35:49+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.76.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:oci/golden-path@sha256:28c9284aa5f21a2b66ad58a34c2125f28793021516760cbfe276c9d312b19e82?arch=arm64&repository_url=index.docker.io%2Flibrary%2Fgolden-path",
+      "type": "container",
+      "name": "golden-path:sbom",
+      "purl": "pkg:oci/golden-path@sha256:28c9284aa5f21a2b66ad58a34c2125f28793021516760cbfe276c9d312b19e82?arch=arm64&repository_url=index.docker.io%2Flibrary%2Fgolden-path",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:0762a1f6557d1e88a761ab05aa7f65a10dc0e559913ea13befb873d907e1a396"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:0cd351bd16de499bf614cf9e35cd1b64e61272119b38dbc95e5eae87163c1f7e"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:187cfc6d1e3e8a40a5e64653bcd3239c140807dcf1c09e48021178705a5a6139"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:275a30dd8ce958b21daa9ad962c6fbc09f98306ee2f486b65c9075dc257b1412"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:28648cfb20d6ae5e7f1d87b1efe172a8624b0080b989e7cf754ef3fbc9738fff"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:30884b21b6a1362fbcdb60743280a138148b6d0ac50a3f8ee3e9f213b371c9e7"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:323c2be748e4417f7ab7b05b33d6c1a52df0788e779143555109ddcd5325c76c"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:4cde6b0bb6f50a5f255eef7b2a42162c661cf776b803225dcac9a659e396bb6b"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:4d049f83d9cf21d1f5cc0e11deaf36df02790d0e60c1a3829538fb4b61685368"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:50a5575df19e16694e9b7bfca79ef13cfce85faab4b0585ff197a078a952b007"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:51fc0459b07a7dcc4fbe2976342ce54e5480f76511a5c5a6a3a30e915a943e20"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:621c35e751a51a9a9dc3e80aa0b7fe8be2a93402ea6ccd307d30852cd7776cda"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:68586ee9197091eb4c49688016112368e8cefd88a6d9a256af9252226f026d3d"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:6c15e5fccfaccef2f4aa935857010ada1b7e7876d1009017c435eb4ad61a61e0"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:6f1cdceb6a3146f0ccb986521156bef8a422cdbb0863396f7f751f575ba308f4"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:7053cf2487142f3b4551d2b94d53aaf3ced5ac2d530b6ab633a1a44a5248e02a"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:7398e1f463581f027983ba0246acea6b73f7ffc9b5bc9ce3ca561a21c7fa430d"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:749380bc32912a6cb386973ec52028fdebce660103611bdce3fb7ce591988dbc"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:7b57942929394e731b49e8f1863a4da2cbd1b9fda48d9f1e75a0a28b2d89d01a"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:7b6535ee7aaad7b6a0338f2b0b7573965427fe1d9191e985f386d3fc6023d869"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:8caf0b7d1a5cc833b90ac1c1bc7bc43770d527a65d4a673fe3e6e9ed1df02da0"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:8d7dc382602d7288c703523fadb073bc653b3854bc76dba1b00f909cefd7d2cb"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:92a3b02188b326c1b10a0a375d3c0019dff4ee8ff02a4b51a7e640bb9400932f"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:93747ef36dd4dfcc9b78c0d297a9410e9db4a9bd32c070961e98dc303dd9d6f6"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:996b9f82e77a92efbe22d30fb62ac76bddf248f2d4913ef044f34feb637b4e15"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:9b2458ae9461ce684f0588280b1eb86ba883297fb5c0dfc23c5bdfe4dd8b6aa9"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:ad51d0769d16ba578106a177987dfe3d2e02c1668c852b795b2f6b024068242a"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:af5aa97ebe6ce1604747ec1e21af7136ded391bcabe4acef882e718a87c86bcc"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:bd3cdfae1d3fdd83a2231d608969b38b82349777c2fff9a7c12d54f8ac5c9b38"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:c63738958759baaf95d07671099c9e41f0cce93260ce4f39df275e6f36f15a52"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:e842bc95a0a8664498b7881e537b5929e419d590f5a9954fb7f81c73c20fc6c7"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:eaa42a9ed1b92daf1a057275d06fa885686249cf840212778fee1145cf6fe6cd"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:ef430e4865b6130e131d5777c1d072fdcc89478668d10ab41a18549e0fdc88b5"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:f998043f43bd1599209638d60163e7f5f36a1ce7acdca0f4ea5f83926dafd4ed"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:fcb0c313318aac64dde0e0574b4df3394902929eb62d43e8b6c47ec4562f170d"
+        },
+        {
+          "name": "aquasecurity:trivy:ImageID",
+          "value": "sha256:28c9284aa5f21a2b66ad58a34c2125f28793021516760cbfe276c9d312b19e82"
+        },
+        {
+          "name": "aquasecurity:trivy:Reference",
+          "value": "golden-path:sbom"
+        },
+        {
+          "name": "aquasecurity:trivy:RepoDigest",
+          "value": "golden-path@sha256:28c9284aa5f21a2b66ad58a34c2125f28793021516760cbfe276c9d312b19e82"
+        },
+        {
+          "name": "aquasecurity:trivy:RepoTag",
+          "value": "golden-path:sbom"
+        },
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        },
+        {
+          "name": "aquasecurity:trivy:Size",
+          "value": "226546688"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "ea1939ad-391d-46e0-8b1e-9b85a76f6d06",
+      "type": "operating-system",
+      "name": "debian",
+      "version": "13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "os-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "debian"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/base-files@13.8%2Bdeb13u7?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Santiago Vila <sanvila@debian.org>"
+      },
+      "name": "base-files",
+      "version": "13.8+deb13u7",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "name": "verbatim"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/base-files@13.8%2Bdeb13u7?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:e842bc95a0a8664498b7881e537b5929e419d590f5a9954fb7f81c73c20fc6c7"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:401d177fd1e8a1e0d7a48139788d026e9a2e919ccb122bedd110ac7cf351f53e"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "base-files@13.8+deb13u7"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "base-files"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "13.8+deb13u7"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/ca-certificates@20250419%2Bdeb13u1?arch=all&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Julien Cristau <jcristau@debian.org>"
+      },
+      "name": "ca-certificates",
+      "version": "20250419+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "MPL-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/ca-certificates@20250419%2Bdeb13u1?arch=all&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:0762a1f6557d1e88a761ab05aa7f65a10dc0e559913ea13befb873d907e1a396"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:5689407c3340e75a085703d3366e55b6105152a2574d971cb884f24228292c1d"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "ca-certificates@20250419+deb13u1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "ca-certificates"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "20250419+deb13u1"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/fontconfig-config@2.15.0-2.3?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Debian freedesktop.org maintainers <pkg-freedesktop-maintainers@lists.alioth.debian.org>"
+      },
+      "name": "fontconfig-config",
+      "version": "2.15.0-2.3",
+      "purl": "pkg:deb/debian/fontconfig-config@2.15.0-2.3?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:68586ee9197091eb4c49688016112368e8cefd88a6d9a256af9252226f026d3d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:bdcaf8263fce11b67e4a4b0e670a958b2bce868d71397d3a2022f58593b611aa"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "fontconfig-config@2.15.0-2.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "fontconfig"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "2.3"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "2.15.0"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/fonts-dejavu-core@2.37-8?arch=all&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Debian Fonts Task Force <debian-fonts@lists.debian.org>"
+      },
+      "name": "fonts-dejavu-core",
+      "version": "2.37-8",
+      "licenses": [
+        {
+          "license": {
+            "id": "Bitstream-Vera"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/fonts-dejavu-core@2.37-8?arch=all&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:0cd351bd16de499bf614cf9e35cd1b64e61272119b38dbc95e5eae87163c1f7e"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:5a380f5229b703f674a3c9c87ef6dd7672a3e3c05867880ea6a86a024b6ff460"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "fonts-dejavu-core@2.37-8"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "fonts-dejavu"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "8"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "2.37"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/gcc-14-base@14.2.0-19?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Debian GCC Maintainers <debian-gcc@lists.debian.org>"
+      },
+      "name": "gcc-14-base",
+      "version": "14.2.0-19",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "GFDL-1.2-only"
+          }
+        },
+        {
+          "license": {
+            "id": "Artistic-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.0-or-later"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/gcc-14-base@14.2.0-19?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:30884b21b6a1362fbcdb60743280a138148b6d0ac50a3f8ee3e9f213b371c9e7"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:278aecde295e501a4fd778a510306c47ff8862395c98a7bbb9f2cc41d2c89e64"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "gcc-14-base@14.2.0-19"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "gcc-14"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "19"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "14.2.0"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libbrotli1@1.1.0-2%2Bdeb13u1?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Tomasz Buchert <tomasz@debian.org>"
+      },
+      "name": "libbrotli1",
+      "version": "1.1.0-2+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/libbrotli1@1.1.0-2%2Bdeb13u1?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:996b9f82e77a92efbe22d30fb62ac76bddf248f2d4913ef044f34feb637b4e15"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:0411c49524fd4cf9cd6fed3a1e0caec8f2b07378bb9ea256ba01508f0eda626d"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "libbrotli1@1.1.0-2+deb13u1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "brotli"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "2+deb13u1"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "1.1.0"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libbz2-1.0@1.0.8-6?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Anibal Monsalve Salazar <anibal@debian.org>"
+      },
+      "name": "libbz2-1.0",
+      "version": "1.0.8-6",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/libbz2-1.0@1.0.8-6?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:eaa42a9ed1b92daf1a057275d06fa885686249cf840212778fee1145cf6fe6cd"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:8d067b931f770104166da729fa83c8b6048f6e2fdaf8f948aa6ed974123d182f"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "libbz2-1.0@1.0.8-6"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "bzip2"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "6"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "1.0.8"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u4?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "GNU Libc Maintainers <debian-glibc@lists.debian.org>"
+      },
+      "name": "libc-bin",
+      "version": "2.41-12+deb13u4",
+      "licenses": [
+        {
+          "license": {
+            "id": "LGPL-2.1-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "name": "LGPL-2.1-or-later WITH link-exception"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-3.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "name": "GPL-2.0-or-later WITH link-exception"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "FSFAP"
+          }
+        },
+        {
+          "license": {
+            "name": "Carnegie"
+          }
+        },
+        {
+          "license": {
+            "name": "Inner-Net"
+          }
+        },
+        {
+          "license": {
+            "name": "MIT-like-Lord"
+          }
+        },
+        {
+          "license": {
+            "name": "BSD-like-Spencer"
+          }
+        },
+        {
+          "license": {
+            "name": "PCRE"
+          }
+        },
+        {
+          "license": {
+            "name": "BSD-3-clause-Carnegie"
+          }
+        },
+        {
+          "license": {
+            "id": "Unicode-DFS-2016"
+          }
+        },
+        {
+          "license": {
+            "id": "BSL-1.0"
+          }
+        },
+        {
+          "license": {
+            "id": "SunPro"
+          }
+        },
+        {
+          "license": {
+            "name": "CORE-MATH"
+          }
+        },
+        {
+          "license": {
+            "name": "BSD-3-clause-Berkeley"
+          }
+        },
+        {
+          "license": {
+            "name": "BSD-3-clause-WIDE"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        },
+        {
+          "license": {
+            "name": "BSD-3-clause-Oracle"
+          }
+        },
+        {
+          "license": {
+            "name": "DEC"
+          }
+        },
+        {
+          "license": {
+            "name": "IBM"
+          }
+        },
+        {
+          "license": {
+            "id": "ISC"
+          }
+        },
+        {
+          "license": {
+            "name": "Univ-Coimbra"
+          }
+        },
+        {
+          "license": {
+            "name": "public-domain"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-3.0-only"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u4?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:7053cf2487142f3b4551d2b94d53aaf3ced5ac2d530b6ab633a1a44a5248e02a"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:0c51c746549f8f9ecbc18a4f6f0c71cc41eb3196c914ad3256fc6dfcadb73f94"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "libc-bin@2.41-12+deb13u4"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "glibc"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "12+deb13u4"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "2.41"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libc6@2.41-12%2Bdeb13u4?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "GNU Libc Maintainers <debian-glibc@lists.debian.org>"
+      },
+      "name": "libc6",
+      "version": "2.41-12+deb13u4",
+      "licenses": [
+        {
+          "license": {
+            "id": "LGPL-2.1-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "name": "LGPL-2.1-or-later WITH link-exception"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-3.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "name": "GPL-2.0-or-later WITH link-exception"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "FSFAP"
+          }
+        },
+        {
+          "license": {
+            "name": "Carnegie"
+          }
+        },
+        {
+          "license": {
+            "name": "Inner-Net"
+          }
+        },
+        {
+          "license": {
+            "name": "MIT-like-Lord"
+          }
+        },
+        {
+          "license": {
+            "name": "BSD-like-Spencer"
+          }
+        },
+        {
+          "license": {
+            "name": "PCRE"
+          }
+        },
+        {
+          "license": {
+            "name": "BSD-3-clause-Carnegie"
+          }
+        },
+        {
+          "license": {
+            "id": "Unicode-DFS-2016"
+          }
+        },
+        {
+          "license": {
+            "id": "BSL-1.0"
+          }
+        },
+        {
+          "license": {
+            "id": "SunPro"
+          }
+        },
+        {
+          "license": {
+            "name": "CORE-MATH"
+          }
+        },
+        {
+          "license": {
+            "name": "BSD-3-clause-Berkeley"
+          }
+        },
+        {
+          "license": {
+            "name": "BSD-3-clause-WIDE"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        },
+        {
+          "license": {
+            "name": "BSD-3-clause-Oracle"
+          }
+        },
+        {
+          "license": {
+            "name": "DEC"
+          }
+        },
+        {
+          "license": {
+            "name": "IBM"
+          }
+        },
+        {
+          "license": {
+            "id": "ISC"
+          }
+        },
+        {
+          "license": {
+            "name": "Univ-Coimbra"
+          }
+        },
+        {
+          "license": {
+            "name": "public-domain"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-3.0-only"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/libc6@2.41-12%2Bdeb13u4?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:50a5575df19e16694e9b7bfca79ef13cfce85faab4b0585ff197a078a952b007"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:2ee8cec66b403fe9cd8ef6b2bf1542a9e902028b82bddc32b4e2e2c22fa8defb"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "libc6@2.41-12+deb13u4"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "glibc"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "12+deb13u4"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "2.41"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libcrypt1@4.4.38-1?arch=arm64&distro=debian-13.7&epoch=1",
+      "type": "library",
+      "supplier": {
+        "name": "Marco d'Itri <md@linux.it>"
+      },
+      "name": "libcrypt1",
+      "version": "1:4.4.38-1",
+      "purl": "pkg:deb/debian/libcrypt1@4.4.38-1?arch=arm64&distro=debian-13.7&epoch=1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:7398e1f463581f027983ba0246acea6b73f7ffc9b5bc9ce3ca561a21c7fa430d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:26c7f95a81c6b2ca8cd8537677c3380b161c1bfc436ae1d2eba76cf0ae773141"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "libcrypt1@1:4.4.38-1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcEpoch",
+          "value": "1"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "libxcrypt"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "1"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "4.4.38"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libexpat1@2.9.0-1~deb13u1?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Laszlo Boszormenyi (GCS) <gcs@debian.org>"
+      },
+      "name": "libexpat1",
+      "version": "2.9.0-1~deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/libexpat1@2.9.0-1~deb13u1?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:749380bc32912a6cb386973ec52028fdebce660103611bdce3fb7ce591988dbc"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:465ddcfbe6eee705bc6241ef37e2fa0c8d2ee16095a0bb64e38324a4fee7fb71"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "libexpat1@2.9.0-1~deb13u1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "expat"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "1~deb13u1"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "2.9.0"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libfontconfig1@2.15.0-2.3?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Debian freedesktop.org maintainers <pkg-freedesktop-maintainers@lists.alioth.debian.org>"
+      },
+      "name": "libfontconfig1",
+      "version": "2.15.0-2.3",
+      "purl": "pkg:deb/debian/libfontconfig1@2.15.0-2.3?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:28648cfb20d6ae5e7f1d87b1efe172a8624b0080b989e7cf754ef3fbc9738fff"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:11fb3c779d75cb676dae7a3f892042443465e1abf05992e4beaf4efaf55acb03"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "libfontconfig1@2.15.0-2.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "fontconfig"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "2.3"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "2.15.0"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libfreetype6@2.13.3%2Bdfsg-1%2Bdeb13u1?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Hugh McMaster <hmc@debian.org>"
+      },
+      "name": "libfreetype6",
+      "version": "2.13.3+dfsg-1+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "id": "FTL"
+          }
+        },
+        {
+          "license": {
+            "id": "MIT"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        },
+        {
+          "license": {
+            "id": "FSFAP"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "name": "Public-Domain"
+          }
+        },
+        {
+          "license": {
+            "name": "MIT-SMC"
+          }
+        },
+        {
+          "license": {
+            "id": "BSL-1.0"
+          }
+        },
+        {
+          "license": {
+            "id": "MIT-Modern-Variant"
+          }
+        },
+        {
+          "license": {
+            "id": "Zlib"
+          }
+        },
+        {
+          "license": {
+            "name": "OpenGroup-MIT"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/libfreetype6@2.13.3%2Bdfsg-1%2Bdeb13u1?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:c63738958759baaf95d07671099c9e41f0cce93260ce4f39df275e6f36f15a52"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:b1789a7bece1ad39905276f4197dd9816d61a1a6daae6643c86eba96021a235e"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "libfreetype6@2.13.3+dfsg-1+deb13u1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "freetype"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "1+deb13u1"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "2.13.3+dfsg"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libgcc-s1@14.2.0-19?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Debian GCC Maintainers <debian-gcc@lists.debian.org>"
+      },
+      "name": "libgcc-s1",
+      "version": "14.2.0-19",
+      "purl": "pkg:deb/debian/libgcc-s1@14.2.0-19?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:fcb0c313318aac64dde0e0574b4df3394902929eb62d43e8b6c47ec4562f170d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:ff43311d121db6d09786fed4a9233aadcf961479170e9da96f21ee71a6fce1dd"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "libgcc-s1@14.2.0-19"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "gcc-14"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "19"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "14.2.0"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libjpeg62-turbo@2.1.5-4?arch=arm64&distro=debian-13.7&epoch=1",
+      "type": "library",
+      "supplier": {
+        "name": "Ondřej Surý <ondrej@debian.org>"
+      },
+      "name": "libjpeg62-turbo",
+      "version": "1:2.1.5-4",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-BY-LC-NE"
+          }
+        },
+        {
+          "license": {
+            "id": "Zlib"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        },
+        {
+          "license": {
+            "id": "MIT"
+          }
+        },
+        {
+          "license": {
+            "id": "NTP"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/libjpeg62-turbo@2.1.5-4?arch=arm64&distro=debian-13.7&epoch=1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:6c15e5fccfaccef2f4aa935857010ada1b7e7876d1009017c435eb4ad61a61e0"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:d8fff954946a376a65be4a8633b5672f8a124270c0fd3f55d317caeb07c0de3d"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "libjpeg62-turbo@1:2.1.5-4"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcEpoch",
+          "value": "1"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "libjpeg-turbo"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "4"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "2.1.5"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/liblcms2-2@2.16-2%2Bdeb13u2?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Thomas Weber <tweber@debian.org>"
+      },
+      "name": "liblcms2-2",
+      "version": "2.16-2+deb13u2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "IJG"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/liblcms2-2@2.16-2%2Bdeb13u2?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:7b6535ee7aaad7b6a0338f2b0b7573965427fe1d9191e985f386d3fc6023d869"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:fd886897da0a8f5fd6dba858e31204593a659eda7bb0e001f67da24582be9e48"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "liblcms2-2@2.16-2+deb13u2"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "lcms2"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "2+deb13u2"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "2.16"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libpng16-16t64@1.6.48-1%2Bdeb13u6?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Maintainers of libpng1.6 packages <libpng1.6@packages.debian.org>"
+      },
+      "name": "libpng16-16t64",
+      "version": "1.6.48-1+deb13u6",
+      "licenses": [
+        {
+          "license": {
+            "id": "Libpng"
+          }
+        },
+        {
+          "license": {
+            "id": "MIT"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "name": "BSD-3-Clause WITH advertising-clause"
+          }
+        },
+        {
+          "license": {
+            "name": "Libpng OR Apache-2.0 OR BSD-3-Clause"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/libpng16-16t64@1.6.48-1%2Bdeb13u6?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:9b2458ae9461ce684f0588280b1eb86ba883297fb5c0dfc23c5bdfe4dd8b6aa9"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:4fe71bcade968032d56b86869a8f5d67afe431a23e66916cfbcf2ecfc8860351"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "libpng16-16t64@1.6.48-1+deb13u6"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "libpng1.6"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "1+deb13u6"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "1.6.48"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libstdc%2B%2B6@14.2.0-19?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Debian GCC Maintainers <debian-gcc@lists.debian.org>"
+      },
+      "name": "libstdc++6",
+      "version": "14.2.0-19",
+      "purl": "pkg:deb/debian/libstdc%2B%2B6@14.2.0-19?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:323c2be748e4417f7ab7b05b33d6c1a52df0788e779143555109ddcd5325c76c"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:35d8e5f294cf94c1f251ca338d7558e62e820d945ff4603833cdfaed4abc7ccf"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "libstdc++6@14.2.0-19"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "gcc-14"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "19"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "14.2.0"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libuuid1@2.41.5-0%2Bdeb13u1?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Chris Hofstaedtler <zeha@debian.org>"
+      },
+      "name": "libuuid1",
+      "version": "2.41.5-0+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-or-later"
+          }
+        },
+        {
+          "license": {
+            "name": "public-domain"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-4-Clause"
+          }
+        },
+        {
+          "license": {
+            "id": "MIT"
+          }
+        },
+        {
+          "license": {
+            "id": "ISC"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        },
+        {
+          "license": {
+            "name": "BSLA"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-3.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-3.0-only"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/libuuid1@2.41.5-0%2Bdeb13u1?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:93747ef36dd4dfcc9b78c0d297a9410e9db4a9bd32c070961e98dc303dd9d6f6"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:c64517c59c6ab14146695b44aa72e44fd19f46b51195fd7e81b24861fa47bb54"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "libuuid1@2.41.5-0+deb13u1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "util-linux"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "0+deb13u1"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "2.41.5"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/media-types@13.0.0?arch=all&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Mime-Support Packagers <team+debian-mimesupport-packagers@tracker.debian.org>"
+      },
+      "name": "media-types",
+      "version": "13.0.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "ad-hoc"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/media-types@13.0.0?arch=all&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:275a30dd8ce958b21daa9ad962c6fbc09f98306ee2f486b65c9075dc257b1412"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:d6b1b89eccacc15c2420b2776d72c1dae334a00805ed9af54bf2f71e4d536f28"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "media-types@13.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "media-types"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "13.0.0"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/netbase@6.5?arch=all&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Marco d'Itri <md@linux.it>"
+      },
+      "name": "netbase",
+      "version": "6.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/netbase@6.5?arch=all&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:621c35e751a51a9a9dc3e80aa0b7fe8be2a93402ea6ccd307d30852cd7776cda"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:c172f21841dff4c8cf45cde46589c1c2616cefe7e819965e92e6d3475c428aa0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "netbase@6.5"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "netbase"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "6.5"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/temurin-21-jre@21.0.13.0.0%2B9-0?arch=arm64&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "Eclipse Adoptium Package Maintainers <temurin-dev@eclipse.org>"
+      },
+      "name": "temurin-21-jre",
+      "version": "21.0.13.0.0+9-0",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0-CE"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/temurin-21-jre@21.0.13.0.0%2B9-0?arch=arm64&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:8d7dc382602d7288c703523fadb073bc653b3854bc76dba1b00f909cefd7d2cb"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:b7b81dc84bf0542991a4410302ac11d80e9c7660568a9008c53dcf0b55bb0c38"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "temurin-21-jre@21.0.13.0.0+9-0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "temurin-21-jre"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "0"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "21.0.13.0.0+9"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/tzdata-legacy@2026e-0%2Bdeb13u1?arch=all&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "GNU Libc Maintainers <debian-glibc@lists.debian.org>"
+      },
+      "name": "tzdata-legacy",
+      "version": "2026e-0+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "public-domain"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/tzdata-legacy@2026e-0%2Bdeb13u1?arch=all&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:ef430e4865b6130e131d5777c1d072fdcc89478668d10ab41a18549e0fdc88b5"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a99dd1dd5eaf3e2099256f1a75c8e4c02a1d3a81b8e2bfd1735b1dd166b68a12"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "tzdata-legacy@2026e-0+deb13u1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "tzdata"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "0+deb13u1"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "2026e"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/tzdata@2026e-0%2Bdeb13u1?arch=all&distro=debian-13.7",
+      "type": "library",
+      "supplier": {
+        "name": "GNU Libc Maintainers <debian-glibc@lists.debian.org>"
+      },
+      "name": "tzdata",
+      "version": "2026e-0+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "public-domain"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/tzdata@2026e-0%2Bdeb13u1?arch=all&distro=debian-13.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:92a3b02188b326c1b10a0a375d3c0019dff4ee8ff02a4b51a7e640bb9400932f"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:617b009a71d625ef77982b400cb9939dd5ed9809ebf50681a0520b7c08c0ca89"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "tzdata@2026e-0+deb13u1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "tzdata"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "0+deb13u1"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "2026e"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/zlib1g@1.3.dfsg%2Breally1.3.1-1%2Bb1?arch=arm64&distro=debian-13.7&epoch=1",
+      "type": "library",
+      "supplier": {
+        "name": "Mark Brown <broonie@debian.org>"
+      },
+      "name": "zlib1g",
+      "version": "1:1.3.dfsg+really1.3.1-1+b1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Zlib"
+          }
+        }
+      ],
+      "purl": "pkg:deb/debian/zlib1g@1.3.dfsg%2Breally1.3.1-1%2Bb1?arch=arm64&distro=debian-13.7&epoch=1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:7b57942929394e731b49e8f1863a4da2cbd1b9fda48d9f1e75a0a28b2d89d01a"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:8072b5a0f7957662b5097bbaec05c482fb580118820d83849421d879854b12be"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "zlib1g@1:1.3.dfsg+really1.3.1-1+b1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcEpoch",
+          "value": "1"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "zlib"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcRelease",
+          "value": "1"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "1.3.dfsg+really1.3.1"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/ch.qos.logback/logback-classic@1.5.38",
+      "type": "library",
+      "group": "ch.qos.logback",
+      "name": "logback-classic",
+      "version": "1.5.38",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "bc5873cb4a7f502ce18ce2977d98ad26b9f96444"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        }
+      ],
+      "purl": "pkg:maven/ch.qos.logback/logback-classic@1.5.38",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/logback-classic-1.5.38.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/ch.qos.logback/logback-core@1.5.38",
+      "type": "library",
+      "group": "ch.qos.logback",
+      "name": "logback-core",
+      "version": "1.5.38",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "7b1d133b29bf42ff268cf3f71d1308b80480fb8d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        }
+      ],
+      "purl": "pkg:maven/ch.qos.logback/logback-core@1.5.38",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/logback-core-1.5.38.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21",
+      "type": "library",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-annotations",
+      "version": "2.21",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "b1bc1868bf02dc0bd6c7836257a036a331005309"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/jackson-annotations-2.21.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/commons-logging/commons-logging@1.3.6",
+      "type": "library",
+      "group": "commons-logging",
+      "name": "commons-logging",
+      "version": "1.3.6",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "63e78ca6cd446c0ad166d14f03ed99e7efb3896d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/commons-logging/commons-logging@1.3.6",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/commons-logging-1.3.6.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/dev.lab.goldenpath/golden-path-java@0.0.1-SNAPSHOT",
+      "type": "library",
+      "group": "dev.lab.goldenpath",
+      "name": "golden-path-java",
+      "version": "0.0.1-SNAPSHOT",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "fd60fa564e2b24484d9104b5851827ff50e448a8"
+        }
+      ],
+      "purl": "pkg:maven/dev.lab.goldenpath/golden-path-java@0.0.1-SNAPSHOT",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/io.micrometer/micrometer-commons@1.17.2",
+      "type": "library",
+      "group": "io.micrometer",
+      "name": "micrometer-commons",
+      "version": "1.17.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "713614728673cc0f57a88ac0a3c7ab7ff5a60824"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micrometer/micrometer-commons@1.17.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/micrometer-commons-1.17.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/io.micrometer/micrometer-core@1.17.2",
+      "type": "library",
+      "group": "io.micrometer",
+      "name": "micrometer-core",
+      "version": "1.17.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "6fdf2e82cae6c7a302abcf68aef82da98b4fd008"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micrometer/micrometer-core@1.17.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/micrometer-core-1.17.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/io.micrometer/micrometer-jakarta9@1.17.2",
+      "type": "library",
+      "group": "io.micrometer",
+      "name": "micrometer-jakarta9",
+      "version": "1.17.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "c299d4a2591e772d287512ab1c3ad225376a52f3"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micrometer/micrometer-jakarta9@1.17.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/micrometer-jakarta9-1.17.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/io.micrometer/micrometer-observation@1.17.2",
+      "type": "library",
+      "group": "io.micrometer",
+      "name": "micrometer-observation",
+      "version": "1.17.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "b069be62d5d1a0f2f61fa8de6dede8f8f0ffc49a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micrometer/micrometer-observation@1.17.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/micrometer-observation-1.17.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/jakarta.annotation/jakarta.annotation-api@3.0.0",
+      "type": "library",
+      "group": "jakarta.annotation",
+      "name": "jakarta.annotation-api",
+      "version": "3.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "54f928fadec906a99d558536756d171917b9d936"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-2.0"
+          }
+        },
+        {
+          "license": {
+            "name": "GPL-2.0-only WITH classpath-exception"
+          }
+        }
+      ],
+      "purl": "pkg:maven/jakarta.annotation/jakarta.annotation-api@3.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/jakarta.annotation-api-3.0.0.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+      "type": "library",
+      "group": "org.apache.logging.log4j",
+      "name": "log4j-api",
+      "version": "2.25.5",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "6c80ea65e41f7858f7e15cb390c98c36167c7b3a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/log4j-api-2.25.5.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+      "type": "library",
+      "group": "org.apache.logging.log4j",
+      "name": "log4j-to-slf4j",
+      "version": "2.25.5",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "bafb12d62913815e040218e34c80d75ad6db09c1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/log4j-to-slf4j-2.25.5.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.27",
+      "type": "library",
+      "group": "org.apache.tomcat.embed",
+      "name": "tomcat-embed-core",
+      "version": "11.0.27",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "30cc98777f843d290bbca645f15c54864cc64491"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.27",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/tomcat-embed-core-11.0.27.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.27",
+      "type": "library",
+      "group": "org.apache.tomcat.embed",
+      "name": "tomcat-embed-el",
+      "version": "11.0.27",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "349ae4673953057dc8d0f51f17e5cf7088cca660"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.27",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/tomcat-embed-el-11.0.27.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.27",
+      "type": "library",
+      "group": "org.apache.tomcat.embed",
+      "name": "tomcat-embed-websocket",
+      "version": "11.0.27",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "f94e1b5ad075e0a8d47aa8fe9c9d8d842eb1d67e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.27",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/tomcat-embed-websocket-11.0.27.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2",
+      "type": "library",
+      "group": "org.hdrhistogram",
+      "name": "HdrHistogram",
+      "version": "2.2.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "7959933ebcc0f05b2eaa5af0a0c8689fa257b15c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "CC0-1.0"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/HdrHistogram-2.2.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.jspecify/jspecify@1.0.1",
+      "type": "library",
+      "group": "org.jspecify",
+      "name": "jspecify",
+      "version": "1.0.1",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "3d60fd98eb8ade73004f4195c37b6317e02cf3d7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/jspecify-1.0.1.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.slf4j/jul-to-slf4j@2.0.20",
+      "type": "library",
+      "group": "org.slf4j",
+      "name": "jul-to-slf4j",
+      "version": "2.0.20",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "f227b76739ea6a0e014478659d72bdc455fd7fd2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.slf4j/jul-to-slf4j@2.0.20",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/jul-to-slf4j-2.0.20.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.slf4j/slf4j-api@2.0.20",
+      "type": "library",
+      "group": "org.slf4j",
+      "name": "slf4j-api",
+      "version": "2.0.20",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "7fea9d92ba67e9b3c8f03515fb202b86a1fe44f6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.slf4j/slf4j-api@2.0.20",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/slf4j-api-2.0.20.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@4.1.2",
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-actuator-autoconfigure",
+      "version": "4.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "4339a85544b156e1804a05f9745b4adcdbf5bf4f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@4.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-boot-actuator-autoconfigure-4.1.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-actuator@4.1.2",
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-actuator",
+      "version": "4.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "6e4e90cc4d46d66223e81ee3963007242eba7f24"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-actuator@4.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-boot-actuator-4.1.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@4.1.2",
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-autoconfigure",
+      "version": "4.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "1f3d78454767e8f2c3056617c10568642c074e45"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@4.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-boot-autoconfigure-4.1.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-health@4.1.2",
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-health",
+      "version": "4.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "ccb01535ef99fe300dcbe1bbd3b38be86f2affdc"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-health@4.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-boot-health-4.1.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-http-converter@4.1.2",
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-http-converter",
+      "version": "4.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "5289812d78a000ece5b77ecc081c7b0608431a44"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-http-converter@4.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-boot-http-converter-4.1.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-jackson@4.1.2",
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-jackson",
+      "version": "4.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "95cb7be21bf2b6085e978ecd4ebf6b1e0664751d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-jackson@4.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-boot-jackson-4.1.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.1.2",
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-jarmode-tools",
+      "version": "4.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "5abf13050d0e53b72ef0e73864b689259f1143ed"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-boot-jarmode-tools-4.1.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-micrometer-metrics@4.1.2",
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-micrometer-metrics",
+      "version": "4.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "8df660046ad2da22521360aaf9658800b4b5d742"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-micrometer-metrics@4.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-boot-micrometer-metrics-4.1.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-micrometer-observation@4.1.2",
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-micrometer-observation",
+      "version": "4.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "b3d05286b42aa6882e847ba4c0629b7a05e7bd20"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-micrometer-observation@4.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-boot-micrometer-observation-4.1.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-servlet@4.1.2",
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-servlet",
+      "version": "4.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "b666c7a60dfd657d8c431d34b24388ca6cd1a48a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-servlet@4.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-boot-servlet-4.1.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.1.2",
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-tomcat",
+      "version": "4.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "3a88618489924bdd130e39025ce2d3f2ddcd4624"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-boot-tomcat-4.1.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-web-server@4.1.2",
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-web-server",
+      "version": "4.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "2cd935942854e2383f32b74c641c3731f7d84688"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-web-server@4.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-boot-web-server-4.1.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.1.2",
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-webmvc",
+      "version": "4.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "d03a1bd89669e811b6b5b61aa9d7be12907801c8"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-boot-webmvc-4.1.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot@4.1.2",
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot",
+      "version": "4.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "747ac0cfd18ae2741029d5dc24ccefedbf4b38a7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework.boot/spring-boot@4.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-boot-4.1.2.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework/spring-aop@7.0.10",
+      "type": "library",
+      "group": "org.springframework",
+      "name": "spring-aop",
+      "version": "7.0.10",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "411df71572415eef4f1223c0d536d15e30c269b1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework/spring-aop@7.0.10",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-aop-7.0.10.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework/spring-beans@7.0.10",
+      "type": "library",
+      "group": "org.springframework",
+      "name": "spring-beans",
+      "version": "7.0.10",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "ce7f7a9662191a18a4ce8abd40c604e98a2ebdc3"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework/spring-beans@7.0.10",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-beans-7.0.10.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework/spring-context@7.0.10",
+      "type": "library",
+      "group": "org.springframework",
+      "name": "spring-context",
+      "version": "7.0.10",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "d2ed91fdb563586a7e4185eeb7cf806d846bc12d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework/spring-context@7.0.10",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-context-7.0.10.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework/spring-core@7.0.10",
+      "type": "library",
+      "group": "org.springframework",
+      "name": "spring-core",
+      "version": "7.0.10",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "0746da81d290cf89a64b9659596cc851af34f60a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework/spring-core@7.0.10",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-core-7.0.10.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework/spring-expression@7.0.10",
+      "type": "library",
+      "group": "org.springframework",
+      "name": "spring-expression",
+      "version": "7.0.10",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "0cd3ae7f5f9e6c6a3ea4b1721f5cfa92949af1bb"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework/spring-expression@7.0.10",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-expression-7.0.10.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework/spring-web@7.0.10",
+      "type": "library",
+      "group": "org.springframework",
+      "name": "spring-web",
+      "version": "7.0.10",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "0148e4d1a46b72daabe3e2d227b3e6f1d37e9574"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework/spring-web@7.0.10",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-web-7.0.10.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.springframework/spring-webmvc@7.0.10",
+      "type": "library",
+      "group": "org.springframework",
+      "name": "spring-webmvc",
+      "version": "7.0.10",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "469ee866c3e50af3450ae4f22ca4c8e3cf322167"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.springframework/spring-webmvc@7.0.10",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/spring-webmvc-7.0.10.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.yaml/snakeyaml@2.6",
+      "type": "library",
+      "group": "org.yaml",
+      "name": "snakeyaml",
+      "version": "2.6",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "2bc14918a2f8d5414749ab12d0c590cd3198b8c1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.yaml/snakeyaml@2.6",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/snakeyaml-2.6.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/tools.jackson.core/jackson-core@3.1.7",
+      "type": "library",
+      "group": "tools.jackson.core",
+      "name": "jackson-core",
+      "version": "3.1.7",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "a2b54921d5528a9df7f014222d2d519a14858801"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/tools.jackson.core/jackson-core@3.1.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/jackson-core-3.1.7.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/tools.jackson.core/jackson-databind@3.1.7",
+      "type": "library",
+      "group": "tools.jackson.core",
+      "name": "jackson-databind",
+      "version": "3.1.7",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "1f45f7dd68639c962435fae38ca100a70ccc0971"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/tools.jackson.core/jackson-databind@3.1.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/app.jar/BOOT-INF/lib/jackson-databind-3.1.7.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:81fd6d586baf699a49eec3be0c4218595db403cdb1016d92b123de1bbddae21d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a3230e635cdccc84716648e7d6e1f177c9324c4daf21822c3297fab69ad1d7b3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "ea1939ad-391d-46e0-8b1e-9b85a76f6d06",
+      "dependsOn": [
+        "pkg:deb/debian/base-files@13.8%2Bdeb13u7?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/ca-certificates@20250419%2Bdeb13u1?arch=all&distro=debian-13.7",
+        "pkg:deb/debian/fontconfig-config@2.15.0-2.3?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/fonts-dejavu-core@2.37-8?arch=all&distro=debian-13.7",
+        "pkg:deb/debian/gcc-14-base@14.2.0-19?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/libbrotli1@1.1.0-2%2Bdeb13u1?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/libbz2-1.0@1.0.8-6?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u4?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/libc6@2.41-12%2Bdeb13u4?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/libcrypt1@4.4.38-1?arch=arm64&distro=debian-13.7&epoch=1",
+        "pkg:deb/debian/libexpat1@2.9.0-1~deb13u1?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/libfontconfig1@2.15.0-2.3?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/libfreetype6@2.13.3%2Bdfsg-1%2Bdeb13u1?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/libgcc-s1@14.2.0-19?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/libjpeg62-turbo@2.1.5-4?arch=arm64&distro=debian-13.7&epoch=1",
+        "pkg:deb/debian/liblcms2-2@2.16-2%2Bdeb13u2?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/libpng16-16t64@1.6.48-1%2Bdeb13u6?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/libstdc%2B%2B6@14.2.0-19?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/libuuid1@2.41.5-0%2Bdeb13u1?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/media-types@13.0.0?arch=all&distro=debian-13.7",
+        "pkg:deb/debian/netbase@6.5?arch=all&distro=debian-13.7",
+        "pkg:deb/debian/temurin-21-jre@21.0.13.0.0%2B9-0?arch=arm64&distro=debian-13.7",
+        "pkg:deb/debian/tzdata-legacy@2026e-0%2Bdeb13u1?arch=all&distro=debian-13.7",
+        "pkg:deb/debian/tzdata@2026e-0%2Bdeb13u1?arch=all&distro=debian-13.7",
+        "pkg:deb/debian/zlib1g@1.3.dfsg%2Breally1.3.1-1%2Bb1?arch=arm64&distro=debian-13.7&epoch=1"
+      ]
+    },
+    {
+      "ref": "pkg:deb/debian/base-files@13.8%2Bdeb13u7?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/ca-certificates@20250419%2Bdeb13u1?arch=all&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/fontconfig-config@2.15.0-2.3?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/fonts-dejavu-core@2.37-8?arch=all&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/gcc-14-base@14.2.0-19?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/libbrotli1@1.1.0-2%2Bdeb13u1?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/libbz2-1.0@1.0.8-6?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u4?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/libc6@2.41-12%2Bdeb13u4?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/libcrypt1@4.4.38-1?arch=arm64&distro=debian-13.7&epoch=1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/libexpat1@2.9.0-1~deb13u1?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/libfontconfig1@2.15.0-2.3?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/libfreetype6@2.13.3%2Bdfsg-1%2Bdeb13u1?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/libgcc-s1@14.2.0-19?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/libjpeg62-turbo@2.1.5-4?arch=arm64&distro=debian-13.7&epoch=1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/liblcms2-2@2.16-2%2Bdeb13u2?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/libpng16-16t64@1.6.48-1%2Bdeb13u6?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/libstdc%2B%2B6@14.2.0-19?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/libuuid1@2.41.5-0%2Bdeb13u1?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/media-types@13.0.0?arch=all&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/netbase@6.5?arch=all&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/temurin-21-jre@21.0.13.0.0%2B9-0?arch=arm64&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/tzdata-legacy@2026e-0%2Bdeb13u1?arch=all&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/tzdata@2026e-0%2Bdeb13u1?arch=all&distro=debian-13.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:deb/debian/zlib1g@1.3.dfsg%2Breally1.3.1-1%2Bb1?arch=arm64&distro=debian-13.7&epoch=1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/ch.qos.logback/logback-classic@1.5.38",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/ch.qos.logback/logback-core@1.5.38",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/commons-logging/commons-logging@1.3.6",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/dev.lab.goldenpath/golden-path-java@0.0.1-SNAPSHOT",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/io.micrometer/micrometer-commons@1.17.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/io.micrometer/micrometer-core@1.17.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/io.micrometer/micrometer-jakarta9@1.17.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/io.micrometer/micrometer-observation@1.17.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/jakarta.annotation/jakarta.annotation-api@3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.27",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.27",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.27",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.jspecify/jspecify@1.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.slf4j/jul-to-slf4j@2.0.20",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.slf4j/slf4j-api@2.0.20",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@4.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework.boot/spring-boot-actuator@4.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@4.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework.boot/spring-boot-health@4.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework.boot/spring-boot-http-converter@4.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework.boot/spring-boot-jackson@4.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework.boot/spring-boot-micrometer-metrics@4.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework.boot/spring-boot-micrometer-observation@4.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework.boot/spring-boot-servlet@4.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework.boot/spring-boot-web-server@4.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework.boot/spring-boot@4.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework/spring-aop@7.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework/spring-beans@7.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework/spring-context@7.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework/spring-core@7.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework/spring-expression@7.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework/spring-web@7.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework/spring-webmvc@7.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.yaml/snakeyaml@2.6",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/tools.jackson.core/jackson-core@3.1.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/tools.jackson.core/jackson-databind@3.1.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:oci/golden-path@sha256:28c9284aa5f21a2b66ad58a34c2125f28793021516760cbfe276c9d312b19e82?arch=arm64&repository_url=index.docker.io%2Flibrary%2Fgolden-path",
+      "dependsOn": [
+        "ea1939ad-391d-46e0-8b1e-9b85a76f6d06",
+        "pkg:maven/ch.qos.logback/logback-classic@1.5.38",
+        "pkg:maven/ch.qos.logback/logback-core@1.5.38",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21",
+        "pkg:maven/commons-logging/commons-logging@1.3.6",
+        "pkg:maven/dev.lab.goldenpath/golden-path-java@0.0.1-SNAPSHOT",
+        "pkg:maven/io.micrometer/micrometer-commons@1.17.2",
+        "pkg:maven/io.micrometer/micrometer-core@1.17.2",
+        "pkg:maven/io.micrometer/micrometer-jakarta9@1.17.2",
+        "pkg:maven/io.micrometer/micrometer-observation@1.17.2",
+        "pkg:maven/jakarta.annotation/jakarta.annotation-api@3.0.0",
+        "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+        "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+        "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.27",
+        "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.27",
+        "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.27",
+        "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2",
+        "pkg:maven/org.jspecify/jspecify@1.0.1",
+        "pkg:maven/org.slf4j/jul-to-slf4j@2.0.20",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.20",
+        "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@4.1.2",
+        "pkg:maven/org.springframework.boot/spring-boot-actuator@4.1.2",
+        "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@4.1.2",
+        "pkg:maven/org.springframework.boot/spring-boot-health@4.1.2",
+        "pkg:maven/org.springframework.boot/spring-boot-http-converter@4.1.2",
+        "pkg:maven/org.springframework.boot/spring-boot-jackson@4.1.2",
+        "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.1.2",
+        "pkg:maven/org.springframework.boot/spring-boot-micrometer-metrics@4.1.2",
+        "pkg:maven/org.springframework.boot/spring-boot-micrometer-observation@4.1.2",
+        "pkg:maven/org.springframework.boot/spring-boot-servlet@4.1.2",
+        "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.1.2",
+        "pkg:maven/org.springframework.boot/spring-boot-web-server@4.1.2",
+        "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.1.2",
+        "pkg:maven/org.springframework.boot/spring-boot@4.1.2",
+        "pkg:maven/org.springframework/spring-aop@7.0.10",
+        "pkg:maven/org.springframework/spring-beans@7.0.10",
+        "pkg:maven/org.springframework/spring-context@7.0.10",
+        "pkg:maven/org.springframework/spring-core@7.0.10",
+        "pkg:maven/org.springframework/spring-expression@7.0.10",
+        "pkg:maven/org.springframework/spring-web@7.0.10",
+        "pkg:maven/org.springframework/spring-webmvc@7.0.10",
+        "pkg:maven/org.yaml/snakeyaml@2.6",
+        "pkg:maven/tools.jackson.core/jackson-core@3.1.7",
+        "pkg:maven/tools.jackson.core/jackson-databind@3.1.7"
+      ]
+    }
+  ],
+  "vulnerabilities": []
+}
