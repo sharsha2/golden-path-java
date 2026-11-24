@@ -41,16 +41,31 @@ jobs:
         # v0.36.0 published 2026-04-22, five weeks AFTER the 2026-03-19 trivy-action
         # tag-hijack incident (CVE-2026-33634). Pinned by SHA so a tag force-push
         # cannot change what runs here.
+        # exit-code 0: the report below runs first, then the gate reads this file.
         uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
         with:
           scan-type: fs
           scan-ref: .
           scanners: vuln
+          format: json
+          output: trivy-fs.json
           severity: HIGH,CRITICAL
           ignore-unfixed: true
-          exit-code: '1'                 # fail the job if anything is found
+          exit-code: '0'
           trivyignores: .trivyignore
-          version: v0.76.1               # pin the Trivy binary too; update after checking releases
+          version: v0.76.1
+      # Before the gate: a failing scan is when you most need to read the report.
+      - name: Dependency report
+        run: ./scripts/dep-report.sh trivy-fs.json >> "$GITHUB_STEP_SUMMARY"
+      - name: Dependency gate
+        run: |
+          n=$(jq '[.Results[]?.Vulnerabilities[]?] | length' trivy-fs.json)
+          if [ "$n" -gt 0 ]; then
+            echo "::error::$n fixable HIGH/CRITICAL dependency finding(s) — see the Dependency report on the run summary"
+            exit 1
+          fi
+          echo "Gate passed: no fixable HIGH/CRITICAL dependency findings."
+               # pin the Trivy binary too; update after checking releases
 
   secret-scan:
     runs-on: ubuntu-latest
@@ -121,17 +136,22 @@ jobs:
         with: { persist-credentials: false }
       - name: Build image
         run: docker build -t golden-path:ci .
-      - name: Trivy - image gate
+      # Scan to JSON with exit-code 0 so this step never fails. The report and the
+      # gate below both read this one file, so the verdict can never disagree with
+      # what the report shows, and the image is only scanned once.
+      - name: Trivy - scan image
         uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
         with:
           image-ref: golden-path:ci
+          format: json
+          output: trivy.json
           severity: HIGH,CRITICAL
           ignore-unfixed: true
-          exit-code: '1'
+          exit-code: '0'
           trivyignores: .trivyignore
           version: v0.76.1
       # SBOM of the exact image that was just scanned, so the inventory and the
-      # gate always describe the same artifact.
+      # verdict always describe the same artifact.
       - name: Generate SBOM (CycloneDX)
         uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
         with:
@@ -139,12 +159,28 @@ jobs:
           format: cyclonedx
           output: sbom.cdx.json
           version: v0.76.1
+      # Written BEFORE the gate on purpose: a failing build is exactly when you
+      # need the report, so it must not be skipped by the failure.
+      - name: Build report
+        run: ./scripts/build-report.sh trivy.json sbom.cdx.json golden-path:ci >> "$GITHUB_STEP_SUMMARY"
       - name: Upload SBOM
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: sbom-${{ github.sha }}
-          path: sbom.cdx.json
+          path: |
+            sbom.cdx.json
+            trivy.json
           retention-days: 30
+      # THE GATE. Reads the scan above rather than re-scanning, and fails the job
+      # if anything fixable was found. Everything after this is main-only.
+      - name: Image gate
+        run: |
+          n=$(jq '[.Results[]?.Vulnerabilities[]?] | length' trivy.json)
+          if [ "$n" -gt 0 ]; then
+            echo "::error::$n fixable HIGH/CRITICAL finding(s) — see the Build report on the run summary"
+            exit 1
+          fi
+          echo "Gate passed: no fixable HIGH/CRITICAL findings."
       # Everything below runs ONLY on main: PRs are scanned but never pushed
       - if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         name: Push to GHCR
