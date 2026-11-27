@@ -250,3 +250,24 @@ jobs:
             --certificate-identity "https://github.com/$GITHUB_WORKFLOW_REF" \
             --certificate-oidc-issuer "https://token.actions.githubusercontent.com" > /dev/null
           echo "Signed and verified: \`$IMAGE@$DIGEST\`" >> "$GITHUB_STEP_SUMMARY"
+      # Re-generate the SBOM from the PUSHED digest, not from the local
+      # golden-path:ci tag the image job scanned. The attestation must describe
+      # the artifact the client actually pulls, and only the digest proves that.
+      - name: Generate SBOM from the pushed image
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+        with:
+          image-ref: ${{ needs.image.outputs.image }}@${{ needs.image.outputs.digest }}
+          format: cyclonedx
+          output: sbom.cdx.json
+          version: v0.76.1
+      # Signature  = "this digest came from my pipeline."
+      # Attestation = that, PLUS a signed statement about it — here the SBOM.
+      # The inventory becomes something a client can verify, not a file we email.
+      - name: Attest the SBOM (signed, attached to the digest)
+        run: cosign attest --yes --type cyclonedx --predicate sbom.cdx.json "$IMAGE@$DIGEST"
+      - name: Verify the SBOM attestation
+        run: |
+          cosign verify-attestation "$IMAGE@$DIGEST" --type cyclonedx \
+            --certificate-identity "https://github.com/$GITHUB_WORKFLOW_REF" \
+            --certificate-oidc-issuer "https://token.actions.githubusercontent.com" > /dev/null
+          echo "SBOM attested: \`$IMAGE@$DIGEST\`" >> "$GITHUB_STEP_SUMMARY"
