@@ -193,14 +193,19 @@ jobs:
           ACTOR: ${{ github.actor }}
         run: |
           OWNER=$(echo "$GITHUB_REPOSITORY_OWNER" | tr '[:upper:]' '[:lower:]')
-          IMAGE="ghcr.io/$OWNER/golden-path:${GITHUB_SHA::12}"
+          REPO="ghcr.io/$OWNER/golden-path"
+          IMAGE="$REPO:${GITHUB_SHA::12}"
           echo "$GH_TOKEN" | docker login ghcr.io -u "$ACTOR" --password-stdin
           docker tag golden-path:ci "$IMAGE"
           docker push "$IMAGE"
-          REF=$(docker inspect --format '{{index .RepoDigests 0}}' "$IMAGE")   # ghcr.io/owner/golden-path@sha256:...
-          echo "image=${REF%@*}"  >> "$GITHUB_OUTPUT"
-          echo "digest=${REF#*@}" >> "$GITHUB_OUTPUT"
-          echo "Pushed: $REF" >> "$GITHUB_STEP_SUMMARY"
+          # Ask the REGISTRY for the digest. Do not read RepoDigests[0]: that list
+          # holds an entry per local tag, and index 0 is not guaranteed to be the
+          # one just pushed. It resolved to "golden-path@sha256:..." here, which
+          # dropped the registry and sent cosign to Docker Hub.
+          DIGEST=$(docker buildx imagetools inspect "$IMAGE" --format '{{.Manifest.Digest}}')
+          echo "image=$REPO"    >> "$GITHUB_OUTPUT"
+          echo "digest=$DIGEST" >> "$GITHUB_OUTPUT"
+          echo "Pushed: \`$REPO@$DIGEST\`" >> "$GITHUB_STEP_SUMMARY"
 
 
   # Signing lives in its own job on purpose. The image job runs a Maven build
